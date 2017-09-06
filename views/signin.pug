@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+
+    link(rel='stylesheet', href='/stylesheets/login.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+
+  body
+    .container
+      -if(message)
+        -if(message.length > 0)
+          div(class='alert, alert-warning')
+            strong Warning:
+            |  #{message}
+      -if(notice)
+        -if(notice.length > 0)
+          div(class='alert, alert-sucess')
+            strong Warning:
+            |  #{notice}
+
+      .signin-wrapper
+        form.form-signin(action='/user/signin', method='post')
+          .form-group
+            center.h2.form-signin-heading Welcome to #{title}
+            label.sr-only(for='inputEmail') Email address
+            input#inputEmail.form-control(name= 'email', type='email', placeholder='Email address', required='', autofocus='')
+            label.sr-only(for='inputPassword') Password
+            input#inputPassword.form-control(name='password', type='password', placeholder='Password', required='')
+            .checkbox
+            label
+              input(type='checkbox', value='remember-me')
+              |  Remember me
+            button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in

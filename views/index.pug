@@ -1,0 +1,76 @@
+extends layout
+
+block content
+  .navbar-wrapper
+    .container
+      nav.navbar.navbar-inverse.navbar-static-top
+        .container
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='#') #{title}
+          #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li.active
+                a(href='#') Home
+              li
+                a(href='/status') Health
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(href='/about') About
+              li
+                a(href='/contact') Contact
+
+    .container
+      .row
+        .col-md-1
+        .col-md-5
+          img.img-circle(src='/images/talos.png', alt='logo', width='300', height='300')
+        .col-md-6
+          .h1 Welcome to Thalos.
+          p Talos aims to be a nice place where you can securely store your files using state of the art encryption algorithms.
+          p Talos has been tought as tool to help people and pretect their civil rights, please use it responsibly.
+          p Due to the nature of this service, each user is the only responsible of the uploaded content: Thalos hasn't been tought to break any law.
+          .row
+            .col-md-2
+             a.btn.btn-lg.btn-info(href='/user/signup', role='button') SIGNUP
+            .col-md-1
+            .col-md-5
+               a.btn.btn-lg.btn-success(text-align='right', href='/user/signin', role='button') SIGNIN
+
+    .row
+     p
+    .row
+     p
+    .row
+      p
+
+    .container
+      // Three columns of text below the carousel
+      .row
+        .col-lg-4
+          img.img-circle(src='https://www.echosteg.com/images/blog/standard/nodejs_logo.png', alt='Powered by NodeJS', width='140', height='140')
+          h2 Powered by NodeJS
+          p
+            |  Thalos Server side exploits the power and security of  NodeJS
+          p
+            a.btn.btn-default(href='https://nodejs.org/en/', role='button') View details »
+        // /.col-lg-4
+        .col-lg-4
+          img.img-circle(src='https://openpgpjs.org/images/icon_openpgpjs.png', alt='OpenPGP', width='140', height='140')
+          h2 Powered by OpenPGP.js
+          p
+            | Thalos use OepnPGP.js library to perform file encryption and verification according to the standard defined in RFC 4880.
+          p
+            a.btn.btn-default(href='https://openpgpjs.org/', role='button') View details »
+        // /.col-lg-4
+        .col-lg-4
+          img.img-circle(src='https://a.slack-edge.com/ae7f/plugins/heroku/assets/service_512.png', width='140', height='140')
+          h2 Deployed on Heroku
+          p
+            | Thalos is nicely deployed on Heroku.
+          p
+            a.btn.btn-default(href='https://heroku.com', role='button') View details »

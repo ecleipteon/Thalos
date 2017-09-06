@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  nav(class='navbar navbar-inverse navbar-static-top')
+    div(class='container')
+      div(class='navbar-header')
+        button( type='button',
+                class='navbar-toggle collapsed',
+                data-toggle='collapse',
+                data-target='#navbar',
+                aria-expanded='false',
+                aria-controls='navbar')
+                  span(class='sr-only') Toggle Navigation
+                  span(class='icon-bar')
+                  span(class='icon-bar')
+                  span(class='icon-bar')
+       a(class='navbar-brand' hred='#') #{title}
+      div(id='navbar', class='navbar-collapse collapse')
+        ul(class='nav navbar-nav')
+          li 
+            a(href='/') Home
+          li
+            a(href='/status') Status
+
+        ul(class='nav navbar-nav navbar-right')
+          li(class='active')
+            a(href='#') About

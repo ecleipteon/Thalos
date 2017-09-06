@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+
+    link(rel='stylesheet', href='/stylesheets/signup.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+
+  body
+    .container
+      .signup-wrapper
+        center.h1 Register Page
+        center.p.lead Welcome to Talos, please signup
+        br
+        -if(message.length > 0)
+          div(class='alert alert-message')
+            p #{message}
+
+        form.form-signin(role='form', id='signup', name='signup' action='/user/signup',method='post', style='max-width: 300px;')
+          .form-group
+              input.form-control(type='text', name="username", placeholder='Enter Username')
+          .form-group
+            input.form-control(type='text', name="email", placeholder='Enter email')
+          .form-group
+            input.form-control(type='password', name="password", placeholder='Password')
+          button.btn.btn-default(type='submit') Submit
+
+          a(href='/users/signup')
+            button.btn.btn-primary(type="button") Cancel

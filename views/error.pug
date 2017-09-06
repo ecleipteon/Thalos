@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  if message == 'Not Found'
+    center
+      img.image(src='/images/404.jpg' )
+  else
+    h1= message
+    h2= error.status
+    pre #{error.stack}

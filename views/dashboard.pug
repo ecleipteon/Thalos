@@ -1,0 +1,193 @@
+doctype html
+html(lang='en')
+  head
+    title #{user.username} - Dashboard
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+    link(href='/stylesheets/dashboard.css', rel='stylesheet')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') #{title}
+        #navbar.navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/user/logout') Logout
+            li
+              a(href='/about') About
+            li
+              a(href='/contacts') Contacts
+
+    .container-fluid
+      .row
+        .sidecos
+          .col-sm-3.col-md-2.sidebar
+            span.glyphicon.glyphicon-user(aria-hidden='true')  Profile
+            ul.nav.nav-sidebar
+              li.active.infos
+                a(href='#')
+                  | Key and basket management
+                  span.sr-only (current)
+            span.glyphicon.glyphicon-cloud(aria-hidden='true')  Secure Storage
+            ul.nav.nav-sidebar
+              li#1.basket
+                a(href='storage/') Baskets
+            span.glyphicon.glyphicon-random(aria-hidden='true')  Secure Sharing
+            ul.nav.nav-sidebar
+              li
+                a(href='share/')  Share a file
+
+
+          .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+
+
+            .panel.panel-default.panel-info.dashpanel
+              .panel-heading
+                The #{user.username}'s dashboard.
+
+              .panel-body
+                .row
+                  p
+                .row
+                    .col-xs-6.col-sm-3.placeholder
+                        img.img-responsive(src="https://s-media-cache-ak0.pinimg.com/236x/5f/60/86/5f608695abe0aca21adb54ea329a63c7--profiles-avatar.jpg", width="200", height="200", alt="User profile")
+                        h4 #{user.username}
+                        span.text-muted (This stormtrooper is awesome you don't really need to change your profile picture!).
+
+                    .col-xs-6.col-sm-3
+                        span.text-muted Basket(s) enabled:
+                          p.baskcounthtml(id='#baskcounthtml') #{user.basketcount}
+
+                        //h4 Label
+                        //span.text-muted Something else
+                    .col-xs-6.col-sm-3.placeholder
+                        .row
+                          -if(user.public_key == '0')
+                              .alert.alert-danger
+                                strong It seems that you haven't generated a Master Key yet.
+                                p Please click the button below to generate your own Master Key and start to use Thalos.
+                                p If this message doesn't disappear after the key creation, please refresh the page.
+                                a(href ='#genkeyModal', role='button', class='btn btn-lg btn-success', data-toggle='modal') + Generate Master Key
+                        .row
+                          if(user.public_key == '0')
+                            a.btn.btn-lg.btn-success(type='button', data-toggle='tooltip', data-placement='right', title="Please generate a Master Key first") + Add new basket
+                          else if(user.basketcount > 2)
+                            a.btn.btn-lg.btn-success(type='button', data-toggle='tooltip', data-placement='right', title="You can't have more than 3 baskets") + Add new basket
+                          else
+                            a(href='#addBasketModal', role='button', class='btn btn-lg btn-success addnewbasketbtn', data-toggle='modal') + Add new basket
+                        .row
+                          p
+                        .row
+                          // a(href ='#loadKeyModal', role='button', class='btn btn-lg btn-info', data-toggle='modal') + Load your Master Key
+                    .col-xs-6.col-sm-3
+
+                .row
+                  .col-xs-1.col-sm-1.placeholder
+                  .col-xs-6.col-sm-3.placeholder
+                .row
+                  .test1
+                .row
+                  .test2
+
+
+              .panel-footer
+                p #{title} V 0.1
+
+
+
+
+
+
+
+
+
+
+#genkeyModal.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h4.modal-title Generate Master Key
+      .modal-body
+        p Your Master Key is the only key able to unlock your files. We do not store your key or passphrase, plaese keep them in a safe place, no one except you should access them.
+        p.text-warning Beware! Your master key will be returned. Please, store your master key in a safe place!
+        p.text-warning Beware! You won't be able to change your master key passphrase in future. If you forget it, your data will be lost.
+        p.text-warning Beware! Your master key passphrase MUST be different from your account password.
+        p Please choose a passhprase to unlock your Master Key.
+        form(class='form-horizontal',  name='genkeyform', id='genkeyform')
+          .form-group
+            label.col-sm-2.control-label(for='inputUsername') Username
+            .col-sm-10
+              inputUsername.form-control-static(name='username', type='text') #{user.username}
+          .form-group
+            label.col-sm-2.control-label(for='inputEmail') Email
+            .col-sm-10
+              inputEmail.form-control-static(name='email', type='text') #{user.email}
+          .form-group
+            label.col-sm-2.control-label(for='inputPassword') Passhprase
+            .col-sm-10
+              input#inputPassword.form-control(name='passphrase', type='password', placeholder='Passphrase')
+          .keylink(id='keylink')
+      .modal-footer
+            button.btn.btn-default.closebutt(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary.genbutt(type='button', onclick="genkey('"+user.username+"','"+user.email+"')") Create my Key
+
+#addBasketModal.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+        h4.modal-title Add one basket to your basket list
+      .modal-body
+        p Please insert your master key passpharase
+        p.text-warning Beware! Your passphrase is not the password you choose for you account, it's the passphrase you choose during the master key creation process!
+        form(class='form-horizontal',  name='addbaskeform', id='addbaskeform')
+          .form-group
+            label.col-sm-3.control-label(for='inputPassword') Master Passhprase
+            .col-sm-9
+              input#inputPassword.form-control(name='passphrase', type='password', placeholder='Master Key passphrase')
+          .form-group
+            label.col-sm-4.control-label() Master Key file
+            label.col-sm-2.control-label.btn.btn-default(for='inputFile') Browse
+            .col-sm-1
+              input#inputFile.form-control(name='privkey', type='file', style='display:none', onchange="$('#uploaded').html(this.files[0].name)")
+            .col-sm-5
+              span#uploaded.label.label-info
+          .form-group
+            label.col-sm-3.control-label(for='inputbname') Basket Name
+            .col-sm-9
+              input#inputbname.form-control(name='bname', type='text', placeholder='Basket name', data-toggle='popover', data-placement='top', title='Remind' , data-content='You can\'t have two or more baskets named in the same way.')
+          .form-group
+            label.col-sm-3.control-label(for='inputBPassword') Basket Passhprase
+            .col-sm-9
+              input#inputBPassword.form-control(name='basketpassphrase', type='password', placeholder='Basket passphrase')
+
+          .row
+          .htmlresults(id='htmlresults')
+      .modal-footer
+            button.btn.btn-default.closebutt(type='button', data-dismiss='modal') Close
+            button.btn.btn-primary.genbutt(type='button', onclick="addnewbasket()") Create Basket
+
+
+
+
+
+
+      //
+
+
+
+        Bootstrap core JavaScript
+        ==================================================
+      // Placed at the end of the document so the pages load faster
+      script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+      script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+      script(src='/javascripts/openpgp.min.js')
+      script(src='/javascripts/dashboard.js')
+      script(src='/javascripts/basket.js')

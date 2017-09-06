@@ -1,0 +1,152 @@
+doctype html
+html(lang='en')
+  head
+    title #{user.username} - Dashboard
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+    link(href='/stylesheets/dashboard.css', rel='stylesheet')
+  body
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='#') #{title}
+        #navbar.navbar-collapse.collapse
+          ul.nav.navbar-nav.navbar-right
+            li
+              a(href='/user/logout') Logout
+            li
+              a(href='/about') About
+            li
+              a(href='/contacts') Contacts
+
+    .container-fluid
+      .row
+        .sidecos
+          .col-sm-3.col-md-2.sidebar
+            span.glyphicon.glyphicon-user(aria-hidden='true')  Profile
+            ul.nav.nav-sidebar
+              li.infos
+                a(href='/user/dashboard')
+                  | Key and basket management
+                  span.sr-only (current)
+            span.glyphicon.glyphicon-cloud(aria-hidden='true')  Secure Storage
+            ul.nav.nav-sidebar
+              li.active.basket
+                a(href=' ') Baskets
+            span.glyphicon.glyphicon-random(aria-hidden='true')  Secure Sharing
+            ul.nav.nav-sidebar
+              li
+                a(href='/user/share/')  Share a file
+
+            .loadlist
+
+
+
+          .col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+
+
+            .panel.panel-default.panel-info.baskpanel
+                .panel-heading
+                  the #{user.username}'s basket list.
+
+                .panel-body
+                  .row
+                  p.text-info Please, unlock your bascket list to access single baskets.
+                  .row
+                      .col-xs-12.col-sm-6
+                        form(class='form-horizontal',  name='bloadlistform', id='bloadlistform')
+                          .form-group
+                            label.col-sm-3.control-label(for='inputPassword') Master Passhprase
+                            .col-sm-9
+                              input#inputPassword.form-control(name='passphrase', type='password', placeholder='Master Key passphrase')
+                          .form-group
+                            label.col-sm-3.control-label(for='inputPassword') Master Key
+                            label.col-sm-2.control-label.btn.btn-default(for='inputFile') Browse
+                            .col-sm-1
+                              input#inputFile.form-control(name='privkey2', type='file', style='display:none', onchange="$('#uploaded2').html(this.files[0].name)")
+                            .col-sm-5
+                              span#uploaded2.label.label-info
+                      .col-xs-6.col-sm-3
+                        if(user.public_key == '0')
+                          a.btn.btn-success(type='button', data-toggle='tooltip', data-placement='right', title="Please generate a Master Key first") Load your basket list
+                        else if(user.basketcount == '0')
+                          a.btn.btn-success(type='button', data-toggle='tooltip', data-placement='right', title="At least one basket is needed, please generate one in the management page") Load your basket list
+                        else
+                          a(href='#', role='button', class='btn btn-success', onclick = 'bloadlist()') Load your basket list
+
+
+            //    .panel-footer
+              //    p #{title} V 0.1
+
+
+
+
+            .panel.panel-default.panel-info.filepanel
+                .panel-heading
+                  .paneltitle
+                .panel-body
+                  .row
+                    p.text-warning Due to the nature of this project, Max Upload size: 10MB (it will be increased in future).
+                      | Remind that Thalos has been thought as tool to protect people privacy and freedom: sharing the latest episode of Game of Thrones is not the kind of freedom that we intend to preserve (use Dropbox or Gdrive, instead).
+                  .row
+                    .col-xs-12.col-sm-6
+                      form(class='form-horizontal',  name='upfileform', id='upfileform')
+                        .form-group
+                          label.col-sm-3.control-label(for='inputFile7') Choose a file
+                          label.col-sm-2.control-label.btn.btn-default(for='inputFile7') Browse
+                          .col-sm-2
+                            input#inputFile7.form-control(name='upfile', type='file', style='display:none', onchange="$('#fuploaded').html(this.files[0].name)")
+                          .col-sm-5
+                            span#fuploaded.label.label-info
+                      a.btn.btn-xs.btn-success.upfilebutton(href='#' name='gneh' ) Upload!
+
+                  .row
+                      .col-xs-2.col-sm-2
+                      .col-xs-12.col-sm-6
+                        table.table.table-striped.filetable
+                          thead
+                            tr
+                              th Name
+                              th Size
+                              th Type
+                              th Delete
+                              th Download
+                          tbody
+                  .row
+
+            .row
+              .col-xs-1.col-sm-1.placeholder
+              .col-xs-12.col-sm-9.placeholder
+                table(class='table table-striped basket_table')
+                  thead
+                  tr
+                    th Name
+                    th Size
+                      // span.glyphicon.glyphicon-remove(aria-hidden='true')
+                      th Passphrase
+                      th Open
+                      th Remove
+                  tbody
+            .row
+              // .loadlist
+            .row
+
+          .panel-footer
+            p #{title} V 0.1
+
+
+
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+  script(src='/javascripts/openpgp.min.js')
+  script(src='/javascripts/libthalos.js')
+  script(src='/javascripts/dashboard.js')
+  script(src='/javascripts/basket.js')
+  script(src='/javascripts/upload.js')
+  script(src='/javascripts/download.js')
+  script(src='/javascripts/delete.js')

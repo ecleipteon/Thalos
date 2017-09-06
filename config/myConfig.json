@@ -1,0 +1,45 @@
+{
+
+    "development": {
+
+        "username": "root",
+
+        "password": "pearl8110",
+
+        "database": "db_thalos",
+
+        "host": "localhost",
+
+        "dialect": "mysql"
+
+    },
+
+    "heroku": {
+
+      "username": "",
+
+      "password": "",
+
+      "database": "",
+
+      "host": "ec2-54-75-229-201.eu-west-1.compute.amazonaws.com",
+
+      "dialect": "postgres"
+
+    },
+
+    "production": {
+
+      "username": "",
+
+      "password": "",
+
+      "database": "",
+
+      "host": "",
+
+      "dialect": "postgres"
+
+    }
+
+}
