@@ -33,7 +33,7 @@ Understand the jargon
     
 
 ## **What are we doing**
----------------------
+
 
 ### **The problem**
 
@@ -52,22 +52,22 @@ Understand the jargon
 Descriptions and diagrams will be given soon. Meanwhile you can check the pdf file of documentation in the repo.
 
 
-
 ## **Roadmap and Deadlines **
----------------------
+
 
 Here comes the [Roadmap](https://github.com/ecleipteon/Thalos/issues/5)
 Here will come a timishtable
 
 
-## **Who are we **
----------------------
+## **Who are we**
+
+
 
 Founder of this project is [ecleipteon](https://www.github.com/ecleipteon),  an addicted to privacy and security and enthusiast  student of computer science and engineering from [Napoli](https://www.google.it/maps/place/Naples,+Metropolitan+City+of+Naples/@40.8538487,14.1065184,11z/data=!3m1!4b1!4m5!3m4!1s0x133b0866db7afaeb:0xd23a43cc658cb87e!8m2!3d40.8517746!4d14.2681244?dcr=0).
 This project is mentored by [edovio](https://github.com/edovio) within Round 4 of the [Mozilla Open Leadership](https://mozilla.github.io/leadership-training/) program.
 
 ## **What do we need **
----------------------
+
 
 **You!** Definitely!
 
@@ -78,8 +78,8 @@ We need Security and cryptography expertise - ***Do Thalos leak informations whe
 
 We'd love your feedback along the way, and of course, we'd love you to keep you secrets as well.
 
-## **How can you get involved? **
----------------------
+## **How can you get involved?  **
+
 
 If you think you can help in any of the areas listed above (and we bet you can) or in any of the many areas that we haven't yet thought of (and here we're sure you can) then please check out our contributors' guidelines and our roadmap.
 
@@ -87,6 +87,6 @@ Please note that it's very important to us that we maintain a positive and suppo
 
 
 ## **Get in touch**
----------------------
+
 
 If you want to report a problem or suggest an enhancement we'd love for you to open an issue at this github repository because then we can get right on it. But you can also contact ecleipteon by email (lucamaria [DOT] castiglione [AT] gmail [DOT] com) or on [twitter](https://twitter.com/ecleipteon).
