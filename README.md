@@ -60,7 +60,7 @@ Here will come a timishtable
 
 ## **Who are we**
 
-
+In Greek mythology, [Τάλως](https://en.wikipedia.org/wiki/Talos)  was a giant automaton made of bronze to protect Crete from pirates and invaders. By adding an 'h' you get [Thalos](https://ecleipteon.github.io/Thalos), an ambitious project that aims to protect people form (digital) pirates and oppressors. 
 
 Founder of this project is [ecleipteon](https://www.github.com/ecleipteon),  an addicted to privacy and security and enthusiast  student of computer science and engineering from [Napoli](https://www.google.it/maps/place/Naples,+Metropolitan+City+of+Naples/@40.8538487,14.1065184,11z/data=!3m1!4b1!4m5!3m4!1s0x133b0866db7afaeb:0xd23a43cc658cb87e!8m2!3d40.8517746!4d14.2681244?dcr=0).
 This project is mentored by [edovio](https://github.com/edovio) within Round 4 of the [Mozilla Open Leadership](https://mozilla.github.io/leadership-training/) program.
@@ -96,3 +96,19 @@ Please note that it's very important to us that we maintain a positive and suppo
 
 
 If you want to report a problem or suggest an enhancement we'd love for you to open an issue at this github repository because then we can get right on it. But you can also contact ecleipteon by email (lucamaria [DOT] castiglione [AT] gmail [DOT] com) or on [twitter](https://twitter.com/ecleipteon).
+
+
+## **Thank you**
+
+Thank you so much for visiting the project and we do hope that you'll join us on this amazing journey to support people privacy.
+
+
+## **Glossary**
+
+
+- **README file**: a document that introduces an open project to the public and any potential contributors
+- **repository** or **repo**: a collection of documents related to your project, in which you create and save new code
+or content
+- **Roadmap**: a document outlining the schedule of work to be done on a project
+- **Milestone**: an event or state marking a specific stage in development on the project
+- **Issue**: the GitHub term for tasks, enhancements, and bugs for your projects
