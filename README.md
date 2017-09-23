@@ -64,7 +64,7 @@ Furthermore, a basefile is associated to each user, it is remotely stored encryp
 
 ![how it works ](https://github.com/ecleipteon/Thalos/raw/master/docs/imgs/Thalos1.png)
 
-<center>![Basket description](https://github.com/ecleipteon/Thalos/raw/master/docs/imgs/Thalos01.png)</center>
+![Basket description](https://github.com/ecleipteon/Thalos/raw/master/docs/imgs/Thalos01.png)
 
 ##### **Uploading a file to the Thalos network**
 The diagram below shows how the Thalos system acts when a users uploads a file to the network trough the  web interface. Last part of the sequence diagram is a pinch different from the real implementation but it clearly show how encryption system works.
