@@ -2,7 +2,7 @@
 ==========
 ***Providing open and free file storage and sharing for everyone in the world using state of the art encryption techniques.***
 
-[![gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mozilla/open-leadership-training) ![node](https://img.shields.io/node/v/gh-badges.svg) ![license](https://img.shields.io/hexpm/l/plug.svg)
+[![gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mozilla/open-leadership-training) ![mozilla open leaders](https://img.shields.io/badge/Mozilla%20-Open%20Leaders-orange.svg) ![license](https://img.shields.io/hexpm/l/plug.svg) ![node](https://img.shields.io/node/v/gh-badges.svg) 
 
 ----------
 
