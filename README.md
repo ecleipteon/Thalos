@@ -70,9 +70,13 @@ This project is mentored by [edovio](https://github.com/edovio) within Round 4 o
 **You!** Definitely!
 
 We need expertise full stack developers, user experience, database maintenance, software sustainability, documentation and technical writing and project management. 
+
 We need **Hardware** to deploy Thalos.
+
 We need Security and cryptography expertise - ***Do Thalos leak informations when deals with cryptography elaborations and keys management? Are files really stored safely?***
-***We need Legal consultants. What would happen if a terrorists used Thalos?***
+
+***We need Legal consultants. What would happen if terrorists used Thalos?***
+
 
 We'd love your feedback along the way, and of course, we'd love you to keep you secrets as well.
 
