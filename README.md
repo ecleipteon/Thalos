@@ -2,7 +2,7 @@
 ==========
 ***Providing open and free file storage and sharing for everyone in the world using state of the art encryption techniques.***
 
-[![gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mozilla/open-leadership-training) [![mozilla open leaders](https://img.shields.io/badge/Mozilla%20-Open%20Leaders-orange.svg)](https://mozilla.github.io/leadership-training/round-4/projects/#thalos) ![license](https://img.shields.io/hexpm/l/plug.svg) ![node](https://img.shields.io/node/v/gh-badges.svg) 
+[![gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mozilla/open-leadership-training) [![mozilla open leaders](https://img.shields.io/badge/Mozilla%20-Open%20Leaders-orange.svg)](https://mozilla.github.io/leadership-training/) [![openleadersround4](https://img.shields.io/badge/Mozilla%20Open%20Leaders%20-Round%204%20-blue.svg)](https://mozilla.github.io/leadership-training/round-4/projects/#thalos) ![node](https://img.shields.io/badge/Node-v5-green.svg) ![license](https://img.shields.io/hexpm/l/plug.svg)
 
 ----------
 
@@ -27,9 +27,7 @@ This README is a hub to give you some information about the project. Jump straig
 
 [Get in touch](#get-in-touch)
 
-Find out more
-
-Understand the jargon
+[Glossary](#Glossary)
     
 
 ## **What are we doing**
@@ -49,7 +47,21 @@ Understand the jargon
  - Build a portable internet application that provides a simple management of a remote encrypted virtual filesystem.
 
 #### **How it works**
-Descriptions and diagrams will be given soon. Meanwhile you can check the pdf file of documentation in the repo.
+Thalos shows up as a service that can be easily used, in theory, by any device connected to the internet. People could easily register an account using their email address and choosing an username and a password. Once a user is registered, a master key pair is generated
+
+ - **Master private key**: The private key of the pair, it belongs to the user that can unlock it trough a passphrase chosen during the creation process. It’s highly recommended to choose a passphrase different from the account passoword.
+ 
+ - **Master public key**:  As it can be guessed by its name, this is the public key of the pair, it is stored on a remote database. It could be also used for secure file sharing in future improvements.
+
+Once a key pair is generated it is possible to add a **basket** to your own basket list. Baskets are virtual file containers (they can be thought as very simple virtual filesystems), each basket is described by a basket description file which basically stores information about contained files including name, type, size and a pointer to the encrypted file on the storage (attribute id) as it can be seen. Among with the basket, two new keys are generated, we are talking about:
+
+
+- **Basket Private Key**: Used to decode the basket description and each file which belongs to the basket itself.
+- **Basket Public Key**: Used to encode the basket description and each file which belongs to the basket itself.
+
+Basket description files are stored remotely encrypted with the basket private key.
+Furthermore, a basefile is associated to each user, it is remotely stored encrypted with the Master Key of the user to whom it belongs. A basefile contains the basket private keys of the baskets owned by the user it is associated with.
+
 
 ## **Roadmap and Deadlines**
 
