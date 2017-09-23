@@ -77,8 +77,8 @@ The diagram below shows how the Thalos system acts when a users uploads a file t
 ## **Roadmap and Deadlines**
 
 
-Here comes the [Roadmap](https://github.com/ecleipteon/Thalos/issues/5)
-Here will come a timishtable
+You can check our [Roadmap](https://github.com/ecleipteon/Thalos/issues/5) here
+
 
 
 ## **Who are we**
