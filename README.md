@@ -61,13 +61,15 @@ Once a key pair is generated it is possible to add a **basket** to your own bask
 
 Basket description files are stored remotely encrypted with the basket private key.
 Furthermore, a basefile is associated to each user, it is remotely stored encrypted with the Master Key of the user to whom it belongs. A basefile contains the basket private keys of the baskets owned by the user it is associated with.
-<center>![how it works ](https://github.com/ecleipteon/Thalos/raw/master/docs/imgs/Thalos1.png)</center>
+
+![how it works ](https://github.com/ecleipteon/Thalos/raw/master/docs/imgs/Thalos1.png)
+
 <center>![Basket description](https://github.com/ecleipteon/Thalos/raw/master/docs/imgs/Thalos01.png)</center>
 
 ##### **Uploading a file to the Thalos network**
 The diagram below shows how the Thalos system acts when a users uploads a file to the network trough the  web interface. Last part of the sequence diagram is a pinch different from the real implementation but it clearly show how encryption system works.
 
-<center>![Sequence upload](https://github.com/ecleipteon/Thalos/raw/master/docs/imgs/seqbasketupload.PNG)</center>
+![Sequence upload](https://github.com/ecleipteon/Thalos/raw/master/docs/imgs/seqbasketupload.PNG)
 
 
 
@@ -133,3 +135,4 @@ or content
 - **Roadmap**: a document outlining the schedule of work to be done on a project
 - **Milestone**: an event or state marking a specific stage in development on the project
 - **Issue**: the GitHub term for tasks, enhancements, and bugs for your projects
+
