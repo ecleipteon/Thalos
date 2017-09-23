@@ -110,7 +110,7 @@ We'd love your feedback along the way, and of course, we'd love you to keep you 
 ## **How can you get involved?**
 
 
-If you think you can help in any of the areas listed above (and we bet you can) or in any of the many areas that we haven't yet thought of (and here we're sure you can) then please check out our contributors' guidelines and our roadmap.
+If you think you can help in any of the areas listed above (and we bet you can) or in any of the many areas that we haven't yet thought of (and here we're sure you can) then please check out our [contributors' guidelines](https://github.com/ecleipteon/Thalos/blob/master/CONTRIBUTING.md) and our [roadmap](https://github.com/ecleipteon/Thalos/issues/5).
 
 Please note that it's very important to us that we maintain a positive and supportive environment for everyone who wants to participate. When you join us we ask that you follow our code of conduct in all interactions both on and offline.
 
@@ -135,4 +135,5 @@ or content
 - **Roadmap**: a document outlining the schedule of work to be done on a project
 - **Milestone**: an event or state marking a specific stage in development on the project
 - **Issue**: the GitHub term for tasks, enhancements, and bugs for your projects
+
 
