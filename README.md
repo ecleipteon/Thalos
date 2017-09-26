@@ -89,7 +89,7 @@ You can check our [Roadmap](https://github.com/ecleipteon/Thalos/issues/5) here
 | Short term (Mozfest)   | [Roadmapping](https://github.com/ecleipteon/Thalos/issues/5)             | Patience |
 | Mid term                | [Allow multiple key management, access from multiple devices](https://github.com/ecleipteon/Thalos/issues/6) | Javascript, NodeJS and cryptography |
 | Mid term     | [Rend confirmation code by email](https:/github.com/ecleipteon/Thalos/issues/7)| Javascript and NodeJS   |
-| Lonng term            | [Build High availability Model](https://github.com/ecleipteon/Thalos/issues/6) | Javascript, NodeJS and algorithms |
+| Lonng term            | [Build High availability Model](https://github.com/ecleipteon/Thalos/issues/#) | Javascript, NodeJS and algorithms |
 
 ## **Who are we**
 
