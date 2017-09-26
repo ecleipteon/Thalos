@@ -52,15 +52,16 @@ Thalos shows up as a service that can be easily used, in theory, by any device c
  - **Master private key**: The private key of the pair, it belongs to the user that can unlock it trough a passphrase chosen during the creation process. It’s highly recommended to choose a passphrase different from the account passoword.
  
  - **Master public key**:  As it can be guessed by its name, this is the public key of the pair, it is stored on a remote database. It could be also used for secure file sharing in future improvements.
-
-Once a key pair is generated it is possible to add a **basket** to your own basket list. Baskets are virtual file containers (they can be thought as very simple virtual filesystems), each basket is described by a basket description file which basically stores information about contained files including name, type, size and a pointer to the encrypted file on the storage (attribute id) as it can be seen. Among with the basket, two new keys are generated, we are talking about:
-
+ 
+The barely generated Master Key Pair (MKP) will be used to encrypt the user basefile, as we will discuss later.
+Once the MKP is generated it is possible to add a **basket** to user own basket list. Baskets are virtual file containers (they can be thought as very simple virtual filesystems), each basket is described by a basket description file which basically stores information about contained files including name, type, size and a pointer to the encrypted static file on the storage (attribute id) as it can be seen. Among with the basket, two new keys are generated, they are:
 
 - **Basket Private Key**: Used to decode the basket description and each file which belongs to the basket itself.
 - **Basket Public Key**: Used to encode the basket description and each file which belongs to the basket itself.
 
 Basket description files are stored remotely encrypted with the basket private key.
-Furthermore, a basefile is associated to each user, it is remotely stored encrypted with the Master Key of the user to whom it belongs. A basefile contains the basket private keys of the baskets owned by the user it is associated with.
+
+Furthermore, a basefile is associated to each user, it is remotely stored encrypted with the Master Private Key of the user to whom it belongs. A basefile contains the basket private keys of the baskets owned by the user it is associated with.
 
 ![how it works ](https://github.com/ecleipteon/Thalos/raw/master/docs/imgs/Thalos1.png)
 
