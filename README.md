@@ -81,7 +81,7 @@ The diagram below shows how the Thalos system acts when a users uploads a file t
 You can check our [Roadmap](https://github.com/ecleipteon/Thalos/issues/5) here
 
 |         Deadline             |          Issue               |   Skills Required            | 
-  ---------------------------- | ---------------------------- | ---------------------------- 
+                               |                              |                     
 | Short term goals (Mozfest)   | REST APIs documentation #2   | Patience                     |
 |                              | Build community of users #3  | Good communication           |
 |                              | Build a community of         | Good communication           |
@@ -89,16 +89,16 @@ You can check our [Roadmap](https://github.com/ecleipteon/Thalos/issues/5) here
 |                              | Build a (nice) Web           | HTML, CSS, JS and a pinch of |
 |                              | client #1                    | good taste                   |
 |                              | Roadmapping #5               | Patience                     | 
-  ---------------------------- | ---------------------------- | ---------------------------- 
+                               |                              |    
 | Mid term goals               | Allow Multiple Key           | Javascript, NodeJS and       |
 |                              | Management (access from      | cryptography                 |
 |                              | multiple devices) #6         |                              |
 |                              | Send confirmation code       | Javascript and NodeJS        |
 |                              | by email #7                  |                              |
-  ---------------------------- | ---------------------------- | ----------------------------                                
+                               |                              |                                  
 | Lonng term goals             | Create an High Availability  | Javascript, NodeJS and       |
 |                              | Model                        | algorthms                    |
-  ---------------------------- | ---------------------------- | ---------------------------- 
+                                                               
 
 ## **Who are we**
 
