@@ -85,7 +85,7 @@ You can check our [Roadmap](https://github.com/ecleipteon/Thalos/issues/5) here
 | Short term (Mozfest)  |  [REST APIs documentation](https://github.com/ecleipteon/Thalos/issues/2)  | Patience |
 | Short term (Mozfest)   | [Build community of users](https://github.com/ecleipteon/Thalos/issues/3)| Good communication  |
 | Short term (Mozfest)   | [Build community of contributors](https://github.com/ecleipteon/Thalos/issues/4)| Good communication  |
-| Short term (Mozfest)   | [RBuild a (nice) Web client](https://github.com/ecleipteon/Thalos/issues/1)| Good communication  |
+| Short term (Mozfest)   | [Build a (nice) Web client](https://github.com/ecleipteon/Thalos/issues/1)| Javascript, HTML, CSS and a pinch of good taste  |
 | Short term (Mozfest)   | [Roadmapping](https://github.com/ecleipteon/Thalos/issues/5)             | Patience |
 | Mid term                | [Allow multiple key management, access from multiple devices](https://github.com/ecleipteon/Thalos/issues/6) | Javascript, NodeJS and cryptography |
 | Mid term     | [Rend confirmation code by email](https:/github.com/ecleipteon/Thalos/issues/7)| Javascript and NodeJS   |
