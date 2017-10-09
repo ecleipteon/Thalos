@@ -45,23 +45,6 @@ The current list of labels are [here][link_labels] and include:
     
     All issues with the no code label are asking for feedback or suggestions.
 
-<br>
-
-* [![Applications](https://img.shields.io/badge/-applications-d4c5f9.svg)][link_applications] These issues relate to applications and can include suggestions for future applications or a to do list for ongoing applications.
-    
-    The label is intentionally broad: applications can be for anything from funding or membership of workshops etc.
-
-    People writing applications ***always*** appreciate help pulling together information from other sources and helping with the first draft all the way to the final proof read through. If you like explaining projects in a convincing way, this is a great label to check out!
-
-<br>
-
-* [![Good First Bug](https://img.shields.io/badge/-good%20first%20bug-5319e7.svg)][link_goodfirstbug] These issues contain a task that anyone with any level of experience can help with.
-    
-    A major goal of the project is to have as many people as possible complete their very first [pull request][link_pullrequest] on one of these issues. They will always have explicit information on who to contact to help you through the process.
-  
-    Remember: **There are no stupid questions!**
-    
-    We can not encourage you enough to submit even the tiniest change to the project repository. Let's go from :confused: & :anguished: to :smiley: & :tada: together!
 
 <br>
 
