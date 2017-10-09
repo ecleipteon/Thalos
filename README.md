@@ -124,6 +124,12 @@ If you think you can help in any of the areas listed above (and we bet you can) 
 
 Please note that it's very important to us that we maintain a positive and supportive environment for everyone who wants to participate. When you join us we ask that you follow our code of conduct in all interactions both on and offline.
 
+Furthermore two mailing list have been created in order to receive feedbacks both from users and contributors about the demos.
+Please feel free to join them
+
+User community: https://groups.google.com/forum/#!forum/thalosbeta
+Contributors community: https://groups.google.com/forum/#!forum/thaloscontributors
+
 
 ## **Get in touch**
 
