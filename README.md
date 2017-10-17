@@ -2,7 +2,9 @@
 ==========
 ***Providing open and free file storage and sharing for everyone in the world using state of the art encryption techniques.***
 
-[![gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mozilla/open-leadership-training) [![mozilla open leaders](https://img.shields.io/badge/Mozilla%20-Open%20Leaders-orange.svg)](https://mozilla.github.io/leadership-training/) [![openleadersround4](https://img.shields.io/badge/Mozilla%20Open%20Leaders%20-Round%204%20-blue.svg)](https://mozilla.github.io/leadership-training/round-4/projects/#thalos) ![node](https://img.shields.io/badge/Node-v5-green.svg) ![license](https://img.shields.io/hexpm/l/plug.svg)
+[![gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mozilla/open-leadership-training) [![mozilla open leaders](https://img.shields.io/badge/Mozilla%20-Open%20Leaders-orange.svg)](https://mozilla.github.io/leadership-training/round-4/projects/#thalos)  ![node](https://img.shields.io/badge/Node-v5-green.svg) ![license](https://img.shields.io/hexpm/l/plug.svg) [![Build Status](https://travis-ci.org/ecleipteon/Thalos.svg?branch=master)](https://travis-ci.org/ecleipteon/Thalos)
+
+
 
 ----------
 
