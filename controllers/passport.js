@@ -81,8 +81,11 @@ passport.use('local-signin', new LocalStrategy(
           User.findOne({
               where: {email: email}
           }).then(function(user) {
+
+              bau = {bau:'0bau'};
+
               if (!user) {
-                return done(null, false, req.flash('loginMessage', 'Incorrect email or password'));
+                res.json(bau);
               }
 
               if (!isValidPassword(user.password, password)) {
@@ -93,8 +96,6 @@ passport.use('local-signin', new LocalStrategy(
               if(user.status == 'inactive') {
                 return done(null, false, req.flash('loginMessage', 'Please activate your account first'));
               }
-
-
 
 
               var userinfo = user.get();
@@ -116,13 +117,10 @@ passport.use('local-signin', new LocalStrategy(
 
 
     passport.serializeUser(function(user, done) {
-            console.log("abc serializeUser");
-            console.log(user);
             done(null, user.id);
     });
 
     passport.deserializeUser(function(id, done) {
-            console.log("abc deserializeUser");
             User.findById(id).then(function(user){
                 done(null, user);
             }).catch(function(e){

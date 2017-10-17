@@ -44,16 +44,14 @@ module.exports = function(passport) {
 
   router.post('/signup', passport.authenticate('local-signup', {
     successRedirect: '/user/sendData',
-    failureRedirect: '/user/signup',
-    failureFlash:true
-  }));
+    failureRedirect: '/user/signup'
+    }));
 
 
   router.post('/signin', notLogged, passport.authenticate('local-signin', {
-    successRedirect: '/user/dashboard',
-    failureRedirect: '/user/signin',
-    failureFlash:true
-  }));
+    successRedirect: '/api/user/dashboard',
+    failureRedirect: '/api/user/dashboard'
+    }));
 
   router.get('/activate/:token', authcontroller.validateUser, function(req, res, next) {
     req.logout();
