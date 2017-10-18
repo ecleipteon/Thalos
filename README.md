@@ -117,7 +117,7 @@ We need Security and cryptography expertise - ***Do Thalos leak informations whe
 
 
 
-We'd love your feedback along the way, and of course, we'd love you to keep you secrets as well.
+We'd love your feedback along the way, and of course, we'd love to keep your secrets as well.
 
 ## **How can you get involved?**
 
