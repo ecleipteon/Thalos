@@ -2,7 +2,7 @@
 ==========
 ***Providing open and free file storage and sharing for everyone in the world using state of the art encryption techniques.***
 
-[![Build Status](https://travis-ci.org/ecleipteon/Thalos.svg?branch=master)](https://travis-ci.org/ecleipteon/Thalos) [![mozilla open leaders](https://img.shields.io/badge/Mozilla%20-Open%20Leaders-orange.svg)](https://mozilla.github.io/leadership-training/round-4/projects/#thalos)  ![node](https://img.shields.io/badge/Node-v6-green.svg) ![license](https://img.shields.io/hexpm/l/plug.svg)  [![gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mozilla/open-leadership-training)
+[![mozilla open leaders](https://img.shields.io/badge/Mozilla%20-Open%20Leaders-orange.svg)](https://mozilla.github.io/leadership-training/round-4/projects/#thalos) [![bheu](https://github.com/toolswatch/badges/blob/master/arsenal/2017.svg)](http://www.blackhat.com/eu-17/arsenal/schedule/#thalos---simple-and-secure-approach-to-storage-in-untrusted-environments--9065)  [![Build Status](https://travis-ci.org/ecleipteon/Thalos.svg?branch=master)](https://travis-ci.org/ecleipteon/Thalos) ![node](https://img.shields.io/badge/Node-v6-green.svg) ![license](https://img.shields.io/hexpm/l/plug.svg)  [![gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/mozilla/open-leadership-training)
 
 
 
